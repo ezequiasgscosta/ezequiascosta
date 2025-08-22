@@ -6,7 +6,6 @@
     <title>Portfólio | EC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Variáveis e Reset */
         :root {
             --neon-blue: #0ff0fc;
             --neon-purple: #8a2be2;
@@ -619,6 +618,40 @@
             }
         }
 
+        /* Estilos para o formulário */
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+        
+        .form-message.success {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+            border: 1px solid #2ecc71;
+            display: block;
+        }
+        
+        .form-message.error {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+            border: 1px solid #e74c3c;
+            display: block;
+        }
+        
+        .form-loading {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+            color: var(--neon-blue);
+        }
+        
+        .form-loading i {
+            animation: rotate 1s infinite linear;
+        }
+
         /* Responsividade */
         @media (max-width: 992px) {
             .about-content,
@@ -791,25 +824,27 @@
     <section id="contact">
         <h2 class="section-title">Entre em Contato</h2>
         <div class="contact-content">
-           <form class="contact-form" action="https://formsubmit.io/send/ezequiasgscosta@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="Novo contato do portfólio">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-    
-    <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="message">Mensagem</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Enviar Mensagem</button>
-</form>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                
+                <div class="form-message" id="formMessage"></div>
+                <div class="form-loading" id="formLoading">
+                    <i class="fas fa-circle-notch"></i> Enviando mensagem...
+                </div>
+            </form>
+            
             <div class="contact-info">
                 <div class="contact-item">
                     <div class="contact-icon">
@@ -853,7 +888,12 @@
         <p class="copyright">&copy; 2023 EC. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Script para o formulário com EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // Inicializar EmailJS (substitua com sua Public Key)
+        emailjs.init("GPe7EN7Hx18UxROk6"); // Você precisa criar uma conta no EmailJS e colocar sua chave pública aqui
+
         // Simulação de carregamento mais longo com animação completa
         document.addEventListener('DOMContentLoaded', function() {
             const loadingBar = document.querySelector('.loading-bar');
@@ -957,6 +997,43 @@
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // Configuração do formulário de contato
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            const formLoading = document.getElementById('formLoading');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Mostrar loading
+                formLoading.style.display = 'block';
+                formMessage.style.display = 'none';
+                
+                // Coletar dados do formulário
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // Enviar email usando EmailJS
+                emailjs.send('service_uyh7ahb ', 'template_1f3l0nu', formData)
+                    .then(function(response) {
+                        // Sucesso
+                        formLoading.style.display = 'none';
+                        formMessage.textContent = 'Mensagem enviada com sucesso! Entrarei em contato em breve.';
+                        formMessage.className = 'form-message success';
+                        contactForm.reset();
+                    }, function(error) {
+                        // Erro
+                        formLoading.style.display = 'none';
+                        formMessage.textContent = 'Erro ao enviar mensagem. Tente novamente ou use um dos contatos ao lado.';
+                        formMessage.className = 'form-message error';
+                    });
             });
         });
     </script>
