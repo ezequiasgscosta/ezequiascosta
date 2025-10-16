@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Smooch+Sans&family=Jura&display=swap');
  
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Nosifer&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+
 :root {
     --laranja:#FF6B00;
     --preto-carvao:#1C1C1C;
@@ -54,18 +60,24 @@ header #imag-header {
     object-fit: cover;
 }
 
+#text-header {
+    width: 100%;
+    text-align: center
+}
+
 header h1 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: 'Rubik Moonrocks', cursive;
     font-size: 1.3em;
 }
 
 header h2 {
-    font-family: 'Smooch Sans', sans-serif;
+    font-family: 'Yellowtail', cursive;
     font-size: 1.5em;
+    margin-left: 20px;
      width: 28ch; /* comprimento do texto */
-  white-space: nowrap; /* não quebra linha */
-  overflow: hidden; /* esconde o que ainda não apareceu */
-  border-right: 2px solid orange; /* cursor piscando */
+     white-space: nowrap; /* não quebra linha */
+     overflow: hidden; /* esconde o que ainda não apareceu */
+     border-right: 2px solid orange; /* cursor piscando */
     animation: escrevendo 3s steps(28), escrevendo2 0.5s step-end infinite alternate;
 }
 #icones-header {
@@ -130,6 +142,7 @@ footer {
 @keyframes escrevendo {
   from { width: 0; }
   to { width: 28ch; }
+  from {margin-left: 200px;}
 }
 
 @keyframes escrevendo2 {
