@@ -40,4 +40,50 @@
     }
 
     footer { height: 40px; }
+
+    /*----------------Sobre mim----------------*/
+
+    
+#sobre-mim{
+    display: flex;
+    flex-flow: row-reverse;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40%;
+}
+
+#sobre-mim h1{
+    font-size: 2em;
+    padding-bottom: 5px;
+}
+
+#sobre-mim h2{
+    padding-bottom: 10px;
+}
+
+#sobre-mim h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+  
+}
+
+#sobre-mim p{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px 0;
+    line-height: 1.6em;
+    border-top: 3px dashed var(--cinza-claro);
+}
+
+#sobre-mim h5{
+    font-family: 'rubik', sans-serif;
+    opacity: 0.7;
+}
+
+.text-laranja{
+    color: var(--laranja);
+}
+
+
 }
