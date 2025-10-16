@@ -40,6 +40,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow-x: hidden;
 }
 
 header {
@@ -147,5 +148,13 @@ footer {
 
 @keyframes escrevendo2 {
   50% { border-color: transparent; }
+}
+
+/*-------------------Sobre mim----------------*/
+
+#sobre-mim{
+    width: 100%;
+    text-align: center;
+    align-items: center;
 }
 
