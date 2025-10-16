@@ -1,0 +1,43 @@
+@media (min-width: 720px) {
+    body {
+        align-items: center;
+    }
+
+    header h1, h2 {
+        margin-top: 10px;
+    }
+
+    main {
+        width: 85%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    header {
+        margin-bottom: 0;
+    }
+
+    #icones-header {
+        margin-top: 30px;
+    }
+
+    #icones-header img:hover {
+    transition: 0.8s;
+    width: 3.2em;
+}
+
+    #links-uteis {
+        display: grid;
+        grid-template-columns: repeat(1fr, 1fr);
+        gap: 1vw;
+        align-items: start;
+    }
+
+    #icones-header img {
+        width: 48px;
+        height: 48px;
+        margin: 12px 10px;
+    }
+
+    footer { height: 40px; }
+}
