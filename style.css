@@ -175,3 +175,7 @@ footer {
     padding-bottom: 5px;
   
 }
+
+.text-laranja{
+    color: var(--laranja);
+}
