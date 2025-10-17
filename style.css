@@ -26,6 +26,37 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* ===== Scrollbar moderna e tecnológica ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #1C1C1C, #2A2A2A);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF6B00, #ff8533);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #FF6B00, 0 0 20px #FF6B00;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff8533, #ff9f4d);
+  box-shadow: 0 0 15px #ff8533, 0 0 30px #ff8533;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FF6B00 #1C1C1C;
+}
+
+
 
  /* font-family: "BBH Sans Bogle", sans-serif;*/
  
@@ -157,6 +188,7 @@ footer {
     width: 100%;
     text-align: center;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 #sobre-mim #imagem {
@@ -178,4 +210,41 @@ footer {
 
 .text-laranja{
     color: var(--laranja);
+}
+
+/*---------------Soft Skills--------------------*/
+
+#soft-skills{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+#minha-skill {
+  position: relative; /* precisa disso pra posicionar o card dentro */
+  display: inline-block;
+  cursor: pointer;
+  color: #FF6B00;
+  font-weight: bold;
+}
+
+/* Card inicialmente escondido */
+#card-skill {
+    width: 90vw;
+    background-color: var(--cinza-escuro);
+    border: 1px solid var(--laranja);
+  display: none;
+  position: absolute;
+  z-index: 10;            /* garante que fica por cima */
+  transition: all 0.3s ease;
+}
+
+/* Quando passar o mouse em #minha-skill, o card aparece */
+#minha-skill:hover #card-skill {
+  display: block;
+  top: -50px;
+  left: -21vw;
+  border-radius: 12px;
 }
