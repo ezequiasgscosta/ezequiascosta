@@ -232,9 +232,9 @@ footer {
 
 /* Card inicialmente escondido */
 #card-skill {
-    width: 90vw;
-    background-color: var(--cinza-escuro);
-    border: 1px solid var(--laranja);
+  width: 90vw;
+  background-color: var(--cinza-escuro);
+  border: 1px solid var(--laranja);
   display: none;
   position: absolute;
   z-index: 10;            /* garante que fica por cima */
