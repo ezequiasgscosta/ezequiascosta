@@ -279,10 +279,9 @@ footer {
 
 #hard-skills {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    grid-template-rows: repeat(9, 1fr);    /* 3 linhas */
     gap: 20px; /* espaço entre os itens */
     place-items: center; /* centraliza os itens */
 }
@@ -314,14 +313,19 @@ footer {
 /*------------------------O que posso fazer---------------------------------*/
 
 #oquepossofazer {
-    width: 100%;
-    height: 100vh;
-   
+    width: 80%;
+    height: auto;
+   margin-bottom: 100px;
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 100px;
 }
 
 #cards-oque {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 colunas */
+    grid-template-columns: repeat(1, 1fr); /* 3 colunas */
     grid-template-rows: repeat(3, 1fr);    
     gap: 20px;
     place-items: center; 
@@ -361,9 +365,9 @@ footer {
 #cards-projetos {
     display: flex;
     flex-flow: column nowrap;
-
     align-items: center;
 }
+
 #meus-projetos .card-projeto {
     width: 90vw;
     height: 750px;
@@ -439,7 +443,7 @@ footer {
 
 #contatos {
     width: 100%;
-    height: 100vh;
+    height: 400px;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -447,10 +451,9 @@ footer {
 }
 
 #contato{
-    width: 74vw;
-    height: 600px;
+    width: 100vw;
+    height: 300px;
     margin-top: 20px;
-    background-color: var(--cinza-escuro);
     border: 1px solid var(--laranja);
     border-radius: 12px;
 }
@@ -458,7 +461,7 @@ footer {
 #contato a img{
     width: 100px;
     height: 100px;
-    margin: 50px 20px;
+    margin: 20px 10px;
     filter: invert(100%);
     opacity: 0.7;
     cursor: pointer;

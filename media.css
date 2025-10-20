@@ -183,6 +183,29 @@
     cursor: pointer;
 }
 
+/*----------------------Oque posso fazer-------------------------*/
+
+
+#oquepossofazer {
+    width: 90%;
+    height: auto;
+   margin-bottom: 100px;
+  
+   flex-direction: row wrap;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#cards-oque {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 colunas */
+    grid-template-rows: repeat(3, 1fr);    
+    gap: 20px;
+    place-items: center; 
+}
+
+
 /*----------------------Projetos-------------------------*/
 
 #meus-projetos .card-projeto {
@@ -234,6 +257,50 @@
 
 .botao-projeto button{
     margin: -20px 0px;
+}
+
+/*----------------------Contatos-------------------------*/
+#contatos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 100px;
+}
+
+#contatos h1 {
+  color: var(--laranja);
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+#contato {
+  width: 100vw;
+  height: 200px;
+  background-color: var(--laranja);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+#contato a img {
+  width: 100px;
+  height: 100px;
+  filter: invert(100%);
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+#contato a img:hover {
+  filter: invert(9%) sepia(98%) saturate(749%) hue-rotate(358deg) brightness(103%) contrast(101%);
+  opacity: 1;
+  width: 105px;
 }
 
 
