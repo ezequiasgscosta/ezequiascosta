@@ -357,25 +357,24 @@ footer {
 /*-------------------Meus Projetos----------------*/
 
 #meus-projetos {
-    width: 100%;
+    width: 80%;
     height: 100vh;
    display: flex;
    flex-flow: column nowrap;
-   align-items: center;
-   margin: 0;
+    align-items: center;
+    margin: auto;
 }
 
 
 #cards-projetos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); 
-    grid-template-rows: repeat(2, 1fr);    
-    place-items: center; 
-    
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
 }
 #meus-projetos .card-projeto {
-    width: 95%;
-    height: auto;
+    width: 90%;
+    height: 740px;
     background-color: var(--cinza-escuro);
     border-radius: 12px;
     text-align: center;
@@ -393,6 +392,7 @@ footer {
 .card-projeto p {
     font-size: 1em;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .cel-pc {
@@ -424,4 +424,23 @@ footer {
     border: 10px solid var(--laranja);
     border-radius: 12px;
     margin-top: 10px;
+}
+
+.botao-projeto button{
+    width: 230px;
+    height: 40px;
+    background-color: var(--preto-carvao);
+    color: var(--laranja);
+    border-radius: 5px;
+    font-size: 1.3em;
+    font-family: 'Yellowtail', cursive;
+    margin: 20px 10px;
+    border: 1px solid var(--laranja);
+}
+
+.botao-projeto button:hover{
+    transition: all .5s ease;
+    background-color: var(--laranja);
+    color: var(--cinza-escuro);
+    border: 2px solid var(--cinza-quase-branco);
 }
