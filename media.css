@@ -185,6 +185,19 @@
 
 /*----------------------Projetos-------------------------*/
 
+#meus-projetos .card-projeto {
+    width: 90vw;
+    height: 530px;
+    background-color: var(--cinza-escuro);
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid var(--laranja);
+}
+
 .card-projeto h2 {
     font-size: 2em;
     margin-top: 20px;
@@ -192,34 +205,37 @@
 .card-projeto p {
     font-size: 1.2em;
     margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 .cel-pc {
-    width: 100vw;
-    height: 500px;
+    width: 100%;
+    height: 400px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
-
+    margin-top: 0px;
 }
 
 .celular {
-    width: 250px;
-    height: 500px;
+    width: 150px;
+    height: 300px;
     border: 10px solid var(--laranja);
     border-radius: 12px;
 }
 
 .pc {
-    width: 500px;
-    height: 330px;
+    width: 400px;
+    height: 250px;
     border: 10px solid var(--laranja);
     border-radius: 12px;
-    margin-top: 10px;
+    margin: 0px 20px;
 }
+
+.botao-projeto button{
+    margin: -20px 0px;
+}
+
 
 }
 
