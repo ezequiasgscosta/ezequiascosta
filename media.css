@@ -17,6 +17,10 @@
         margin-bottom: 0;
     }
 
+   #imag-header img {
+    border-radius: 50%;
+    object-fit: contain;
+}
     #icones-header {
         margin-top: 30px;
     }
@@ -34,10 +38,18 @@
     }
 
     #icones-header img {
-        width: 48px;
-        height: 48px;
+        width: 35px;
+        height: 35px;
         margin: 12px 10px;
     }
+
+    #icones-header img:hover {
+    filter: invert(39%) sepia(98%) saturate(749%) hue-rotate(358deg) brightness(103%) contrast(101%);
+    opacity: 1;
+    transition: 0.8s;
+    width: 40px;
+    height: 38px;
+}
 
     footer { height: 40px; }
 
@@ -55,7 +67,7 @@
     width: 100%;
     text-align: center;
     align-items: center;
-    margin-bottom: 40%;
+    margin-bottom: 20%;
 }
 
 #sobre-mim h1{
@@ -86,6 +98,93 @@
     opacity: 0.7;
 }
 
+/*------------------------Soft Skills---------------------------------*/
+
+
+#soft-skills {
+  position: relative; /* precisa disso pra posicionar o card dentro */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 colunas */
+  grid-template-rows: repeat(9, 1fr);    /* 3 linhas */
+  gap: 50px;
+  height: 100vh;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #FF6B00;
+  font-weight: bold;
+  font-size: .6em;
+  padding-top: 10px;
+}
+
+#minha-skill {
+  position: relative; /* precisa disso pra posicionar o card dentro */
+  display: inline-block;
+  width: 300px;
+  height: 120px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #ff6a0064;
+  color: #BDBDBD;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 10px;
+}
+
+/* Card inicialmente escondido */
+#card-skill {
+  width: 400px;
+  height: 150px;
+  background-color: var(--cinza-escuro);
+  border: 1px solid var(--laranja);
+  padding-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -40vw;
+  left: -50vw;
+  z-index: 10;
+  border-radius: 12px;
+  border: 2px solid var(--laranja);
+  transition: all 0.4s ease; /* transição suave */
+}
+
+#minha-skill:hover #card-skill {
+  opacity: 1;
+  visibility: visible;
+  top: 0px;
+  left: -60px;
+}
+
+#card-skill h1 {
+    font-size: 1.5em;
+}
+
+#card-skill p {
+    font-size: .7em;
+    margin-top: 10px;
+}
+
+/*----------------------Hard Skills-------------------------*/
+
+#hard-skills {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: repeat(9, 1fr);    /* 3 linhas */
+    gap:0px; /* espaço entre os itens */
+    place-items: center; /* centraliza os itens */
+}
+
+#habilidades {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    cursor: pointer;
+}
 
 }
+
+
+
 

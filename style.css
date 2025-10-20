@@ -78,18 +78,25 @@ header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    height: 100vh;
     margin-bottom: 40px;
 }
 
 header #imag-header {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: var(--cinza-quase-branco);
     border-radius: 50%;
     border: 3px solid var(--laranja);
     margin-top: 20px;
     margin-bottom: 10px;
-    object-fit: cover;
+}
+
+#imag-header img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
 }
 
 #text-header {
@@ -116,6 +123,8 @@ header h2 {
     width: 100%;
     height: 80px;
     margin-top: 10px;
+    margin-bottom: 50px;
+
 }
 
 #icones-header img {
@@ -186,9 +195,10 @@ footer {
 
 #sobre-mim{
     width: 100%;
+    height: 100vh;
     text-align: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
 }
 
 #sobre-mim #imagem {
@@ -196,10 +206,16 @@ footer {
 }
 
 #sobre-mim img {
-    height: 40em;
+    height: 15em;
 }
 
-
+#sobre-mim p{
+    font-family: 'Jura', sans-serif;
+    font-size: 1em;
+    margin-top: 5px;
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 #sobre-mim h3{
     font-family: 'Playfair Display', serif;
@@ -213,38 +229,163 @@ footer {
 }
 
 /*---------------Soft Skills--------------------*/
-
-#soft-skills{
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin-bottom: 80px;
+.nomes {
+  margin-bottom: 30px;
 }
+
+#soft-skills {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 2 colunas */
+    grid-template-rows: repeat(9, 0.090fr);    /* 3 linhas */
+    gap: 0px; /* espaço entre os itens */
+    place-items: center; /* centraliza os itens */
+}
+
 
 #minha-skill {
   position: relative; /* precisa disso pra posicionar o card dentro */
   display: inline-block;
+  width: 80%;
+  height: 50px;
+  border: 1px solid var(--laranja);
+  border-radius: 12px;
   cursor: pointer;
   color: #FF6B00;
   font-weight: bold;
+  font-size: .6em;
+  padding-top: 10px;
 }
 
 /* Card inicialmente escondido */
 #card-skill {
   width: 90vw;
+  height: 80px;
   background-color: var(--cinza-escuro);
   border: 1px solid var(--laranja);
-  display: none;
+  padding-top: 10px;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
-  z-index: 10;            /* garante que fica por cima */
-  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 12px;
+  transition: all 0.4s ease; /* transição suave */
 }
 
-/* Quando passar o mouse em #minha-skill, o card aparece */
 #minha-skill:hover #card-skill {
-  display: block;
-  top: -50px;
-  left: -21vw;
-  border-radius: 12px;
+  opacity: 1;
+  visibility: visible;
+  top: -8px;
+  left: -40px;
+}
+
+
+/*------------------------Hard Skills---------------------------------*/
+
+#hard-skills {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: repeat(9, 1fr);    /* 3 linhas */
+    gap: 20px; /* espaço entre os itens */
+    place-items: center; /* centraliza os itens */
+}
+
+#habilidades {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#habilidades img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: invert(100%);
+    opacity: 0.7;
+    margin-top: 30px;
+}
+
+#habilidades img:hover {
+    filter: invert(39%) sepia(98%) saturate(749%) hue-rotate(358deg) brightness(103%) contrast(101%);
+    opacity: 1;
+    transition: 0.8s;
+  
+}
+
+/*------------------------O que posso fazer---------------------------------*/
+
+#oquepossofazer {
+    width: 100%;
+    height: 100vh;
+   
+}
+
+#cards-oque {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 colunas */
+    grid-template-rows: repeat(3, 1fr);    
+    gap: 20px;
+    place-items: center; 
+}
+
+#oquepossofazer .card-oque {
+    width: 160px;
+    height: 150px;
+    background-color: var(--cinza-escuro);
+    border-radius: 12px;
+    border: 1px solid var(--laranja);
+    padding: 10px;
+    text-align: center;
+}
+
+#oquepossofazer h1 {
+    font-size: 1em;
+    margin-top: 20px;
+}
+#oquepossofazer p {
+    font-size: .7em;
+    margin-top: 10px;
+}
+
+/*-------------------Meus Projetos----------------*/
+
+#meus-projetos {
+    width: 100%;
+    height: 100vh;
+   
+}
+#projetos-container {
+    
+}
+
+#cards-projetos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 3 colunas */
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 20px;
+    place-items: center; 
+}
+#meus-projetos .card-projeto {
+    width: 100%;
+    height: 150px;
+    background-color: var(--cinza-escuro);
+    border-radius: 12px;
+    border: 1px solid var(--laranja);
+    padding: 10px;
+    text-align: center;
+}
+#meus-projetos h1 {
+    font-size: 1em;
+    margin-top: 20px;
+}
+#meus-projetos p {
+    font-size: .7em;
+    margin-top: 10px;
 }
