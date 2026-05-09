@@ -1,0 +1,272 @@
+/* ================================================== */
+/* MOBILE STYLES - Sempre de Lado */
+/* ================================================== */
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    overflow: auto;
+  }
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+  }
+
+  #pai1-topo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    height: 60px;
+    background: linear-gradient(
+      to right,
+      rgba(27, 22, 22, 0.776),
+      rgba(41, 36, 36, 0.861)
+    );
+    border: 2px solid black;
+  }
+
+  .t1, .t2, .t3 {
+    display: flex;
+    align-items: center;
+    font-family: 'montserrat', sans-serif;
+    width: 100%;
+    height: 80px;
+  }
+
+  .t1 {
+    height: 80%;
+    background-color: rgba(56, 49, 49, 0.776);
+    border: 0.5px solid black;
+  }
+
+  .t2 {
+    justify-content: space-around;
+  }
+
+  .t3 img {
+    width: 20%;
+    filter: invert(1);
+    margin: 20px 20px 20px 50px;
+  }
+
+  .foto-perfil {
+    width: 50px;
+    margin: 20px 20px;
+  }
+
+  .foto-perfil img {
+    width: 70%;
+    border-radius: 10%;
+  }
+
+  .t1, .t2, .t3 h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+  }
+
+  #pai2-topo {
+    width: 35%;
+    height: 80px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  #pai2-topo h1 {
+    color: #ffffff8a;
+    font-family: 'barbra', sans-serif;
+    font-size: 1.6em;
+    text-align: right;
+    margin: auto;
+    margin-right: 20px;
+  }
+
+  /* CENTRO */
+  #centro {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin-top: 5px;
+    color: #ffffff;
+  }
+
+  .paicentro1 {
+    justify-self: start;
+    border: #cfdb1e;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 5px;
+  }
+
+  .esquerda1, .esquerda2, .esquerda3, .esquerda4, .esquerda5 {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: rgba(56, 49, 49, 0.776);
+    font-size: 0.7em;
+    border-end-end-radius: 8px;
+    font-family: monospace;
+    padding: 0 5px;
+  }
+
+  .paicentro1 img {
+    width: 20px;
+    margin: 5px;
+  }
+
+  .esquerda1 {
+    width: 110px;
+  }
+
+  .esquerda2 {
+    width: 130px;
+  }
+
+  .esquerda3 {
+    width: 120px;
+  }
+
+  .esquerda4 {
+    width: 100px;
+  }
+
+  .esquerda5 {
+    width: 100px;
+  }
+
+  .paicentro2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .centro2filho img {
+    width: 90px;
+    height: auto;
+  }
+
+  .paicentro3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .centro3filho {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contato-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    background-color: rgba(56, 49, 49, 0.776);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.7em;
+  }
+
+  .contato-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contato-label {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .seta {
+    display: none;
+  }
+
+  /* RODAPÉ */
+  #baixo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    gap: 5px;
+    margin-top: 5px;
+  }
+
+  .paibaixo1 {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  .rodape {
+    width: 40px;
+    height: 6px;
+    background-color: #cfdb1e;
+    border-radius: 3px;
+  }
+
+  .paibaixo2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+  }
+
+  .baixo2filho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    background-color: rgba(56, 49, 49, 0.776);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+  }
+
+  .baixo2filho:hover {
+    background-color: rgba(80, 70, 70, 0.9);
+  }
+
+  .baixo2filho img {
+    width: 20px;
+    margin-bottom: 3px;
+  }
+
+  .baixo2filho h1 {
+    color: #fff;
+    font-size: 0.65em;
+    text-align: center;
+    margin: 0;
+  }
+
+  .paibaixo3 {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  #start {
+    padding: 6px 20px;
+    font-size: 0.8em;
+    background-color: #cfdb1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  #start:hover {
+    background-color: #d9e93d;
+    box-shadow: 0 0 10px rgba(207, 219, 30, 0.5);
+  }
+}
