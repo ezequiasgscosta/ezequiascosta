@@ -2,7 +2,74 @@
 /* MOBILE STYLES - Sempre de Lado */
 /* ================================================== */
 
-@media (max-width: 768px) {
+#rotate-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  pointer-events: all;
+}
+
+#rotate-overlay .rotate-card {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 24px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(10, 18, 34, 0.84);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+#rotate-overlay .rotate-icon {
+  font-size: 3rem;
+  animation: rotate-loop 1.8s linear infinite;
+}
+
+#rotate-overlay .rotate-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes rotate-loop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  #rotate-overlay {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
   body {
     margin: 0;
     overflow: auto;
@@ -20,7 +87,7 @@
     flex-direction: row;
     align-items: center;
     width: 60%;
-    height: 60px;
+    height: 30px;
     background: linear-gradient(
       to right,
       rgba(27, 22, 22, 0.776),
@@ -34,27 +101,27 @@
     align-items: center;
     font-family: 'montserrat', sans-serif;
     width: 100%;
-    height: 80px;
-  }
+    height: 40px;
+}
 
-  .t1 {
+.t1 {
     height: 80%;
     background-color: rgba(56, 49, 49, 0.776);
     border: 0.5px solid black;
-  }
+}
 
-  .t2 {
+.t2 {
     justify-content: space-around;
-  }
+}
 
-  .t3 img {
-    width: 20%;
+.t3 img {
+    width: 12%;
     filter: invert(1);
     margin: 20px 20px 20px 50px;
   }
 
   .foto-perfil {
-    width: 50px;
+    width: 25px;
     margin: 20px 20px;
   }
 
@@ -66,12 +133,12 @@
   .t1, .t2, .t3 h1 {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.85em;
+    font-size: 0.4em;
   }
 
   #pai2-topo {
     width: 35%;
-    height: 80px;
+    height: auto;
     border-bottom: 1px solid #fff;
     display: flex;
     align-items: center;
@@ -80,19 +147,18 @@
   #pai2-topo h1 {
     color: #ffffff8a;
     font-family: 'barbra', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.3em;
     text-align: right;
-    margin: auto;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
-  /* CENTRO */
+  /*------------------- CENTRO --------------------*/
   #centro {
     width: 100%;
-    height: auto;
+    height: 65vh;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    margin-top: 5px;
+    margin-top: 0px;
     color: #ffffff;
   }
 
@@ -103,7 +169,7 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
-    padding: 5px;
+    margin-left: 5px;
   }
 
   .esquerda1, .esquerda2, .esquerda3, .esquerda4, .esquerda5 {
@@ -131,11 +197,11 @@
   }
 
   .esquerda3 {
-    width: 120px;
+    width: 150px;
   }
 
   .esquerda4 {
-    width: 100px;
+    width: 125px;
   }
 
   .esquerda5 {
@@ -146,7 +212,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10px;
   }
 
   .centro2filho img {
@@ -156,31 +221,29 @@
 
   .paicentro3 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
+    justify-content: end;
+    align-items: top;
+    height: 100%;
   }
 
   .centro3filho {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    height: 100%;
+    gap: 0px;
   }
 
   .contato-item {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px;
-    background-color: rgba(56, 49, 49, 0.776);
     border-radius: 5px;
+    height: 25px;
     cursor: pointer;
-    font-size: 0.7em;
   }
 
   .contato-item img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
   }
 
   .contato-label {
@@ -195,15 +258,16 @@
   /* RODAPÉ */
   #baixo {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    align-items: end;
+    border-radius: 12px;
+    width: 70%;
+    height: 10%;
     padding: 10px;
-    gap: 5px;
-    margin-top: 5px;
   }
 
   .paibaixo1 {
     display: flex;
+    height: 35px;
     gap: 5px;
     justify-content: center;
   }
@@ -216,20 +280,22 @@
   }
 
   .paibaixo2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    gap: 3px;
   }
 
   .baixo2filho {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6px;
-    background-color: rgba(56, 49, 49, 0.776);
+    width: 100px;
+    height: 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.6em;
+    font-size: 1em;
   }
 
   .baixo2filho:hover {
@@ -238,6 +304,7 @@
 
   .baixo2filho img {
     width: 20px;
+    height: 20px;
     margin-bottom: 3px;
   }
 
@@ -250,12 +317,14 @@
 
   .paibaixo3 {
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    margin-right: 3%;
     padding: 8px 0;
   }
 
   #start {
-    padding: 6px 20px;
+    width: 180px;
+    height: 50px;
     font-size: 0.8em;
     background-color: #cfdb1e;
     border: none;

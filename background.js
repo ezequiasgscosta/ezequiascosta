@@ -125,28 +125,25 @@ window.addEventListener('resize', () => {
 });
 
 // Parar animação se a aba ficar invisível (economiza CPU)
+let animationId = null;
+
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) {
-    // Aba invisível - parar animação
-    cancelAnimationFrame(animate);
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
   } else {
-    // Aba visível - reiniciar animação
-    animate();
+    if (!animationId) {
+      animationId = requestAnimationFrame(animate);
+    }
   }
 });
-
-  for (let p of particles) {
-    p.update();
-    p.draw();
-  }
-
-  requestAnimationFrame(animate);
-}
-
-init();
-animate();
 
 window.addEventListener("resize", () => {
   resizeCanvas();
   init();
 });
+
+init();
+animationId = requestAnimationFrame(animate);
