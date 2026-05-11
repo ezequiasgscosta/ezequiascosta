@@ -338,4 +338,34 @@
     background-color: #d9e93d;
     box-shadow: 0 0 10px rgba(207, 219, 30, 0.5);
   }
+
+
+  /*-------secao ocultar-------*/
+
+  #perfilpai {
+    width: 80dvw;
+    height: 60dvh;
+  }
+
+  #perfilmeiopai img {
+    border: none;
+  }
+
+  .secaoOculta {
+    width: 80dvw;
+    height: 80dvh;
+  }
+
+
+
+
+  
+
+    
+
+
+
 }
+
+
+
