@@ -142,14 +142,16 @@
     border-bottom: 1px solid #fff;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
   }
 
   #pai2-topo h1 {
     color: #ffffff8a;
     font-family: 'barbra', sans-serif;
-    font-size: 1.3em;
+    font-size: 0.9em;
     text-align: right;
     margin-right: 10px;
+    margin-bottom: 10px;
   }
 
   /*------------------- CENTRO --------------------*/
@@ -258,6 +260,7 @@
   /* RODAPÉ */
   #baixo {
     display: flex;
+    justify-content: space-around;
     align-items: end;
     border-radius: 12px;
     width: 70dvw;
@@ -283,9 +286,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 30px;
-    gap: 3px;
   }
 
   .baixo2filho {
@@ -323,8 +324,8 @@
   }
 
   #start {
-    width: 43%;
-    height: 14%;
+    width: 20dvw;
+    height: 12dvh;
     font-size: 0.8em;
     background-color: #cfdb1e;
     border: none;

@@ -19,7 +19,7 @@ fotoPerfil.addEventListener('mouseleave', () => {
 // ========== EFEITOS VISUAIS ADICIONAIS ==========
 
 // Adicionar efeito de hover nas imagens de redes sociais
-const redeSociaisImgs = document.querySelectorAll('.centro3filho img:not(.seta)');
+const redeSociaisImgs = document.querySelectorAll('.centro3filho img');
 redeSociaisImgs.forEach(img => {
     img.style.cursor = 'pointer';
     img.style.transition = 'all 0.3s ease';
