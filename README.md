@@ -38,15 +38,7 @@ Um e-commerce completo e responsivo para uma loja de bolos e doces, focado na me
 
 ---
 
-## 📈 Estatísticas do GitHub
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ezequiasgscosta&show_icons=true&theme=radial" alt="Estatísticas do GitHub" />
-</p>
-
----
-
-## ✉️ Contacto
+## ✉️ Contato
 
 Vamos conversar sobre tecnologia ou oportunidades de trabalho?
 
