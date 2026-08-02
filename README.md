@@ -1,4 +1,4 @@
-# 💻 Meu Portfólio | [Seu Nome Completo]
+# 💻 Meu Portfólio | Ezequias gs Costa
 
 Bem-vindo(a) ao repositório do meu portfólio pessoal! Aqui você encontrará uma vitrine dos meus principais projetos como desenvolvedor(a) Full Stack / Frontend, as tecnologias que domino e as soluções que sou capaz de construir.
 
@@ -6,7 +6,7 @@ Bem-vindo(a) ao repositório do meu portfólio pessoal! Aqui você encontrará u
 
 ## 🚀 Sobre Mim
 
-Olá! Sou um(a) desenvolvedor(a) apaixonado(a) por criar experiências digitais incríveis, código limpo e soluções eficientes. Atualmente, foco-me no ecossistema JavaScript/TypeScript, construindo aplicações web modernas e responsivas.
+Olá! Sou um desenvolvedor apaixonado por criar experiências digitais incríveis, código limpo e soluções eficientes. Atualmente, foco-me no ecossistema JavaScript/TypeScript, construindo aplicações web modernas e responsivas.
 
 * 🌍 Baseado(a) em: São Carlos/SP/Brasil
 * ⚡ Focado(a) em: Next.js, React e Integrações de APIs (como Stripe e Supabase).
@@ -17,7 +17,7 @@ Olá! Sou um(a) desenvolvedor(a) apaixonado(a) por criar experiências digitais 
 ## 🛠️ Tecnologias & Ferramentas
 
 ### **Frontend**
-* **Frameworks:** React.js, Next.js (App Router)
+* **Frameworks:** React.js, Next.js 
 * **Estilização:** Tailwind CSS, CSS Modules
 * **Linguagens:** TypeScript, JavaScript (ES6+)
 
